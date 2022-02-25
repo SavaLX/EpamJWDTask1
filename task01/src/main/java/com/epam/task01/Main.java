@@ -7,7 +7,7 @@ import com.epam.task01.entity.ComfortXL;
 import com.epam.task01.entity.ListOfComfortTariffs;
 import com.epam.task01.service.ClientsCounter;
 import com.epam.task01.service.SearchTariff;
-import com.epam.task01.service.SortComfortTariffs;
+import com.epam.task01.service.ComfortTariffsSorter;
 import com.epam.task01.service.exception.WrongInputDataException;
 import com.epam.task01.view.IOData;
 
@@ -17,7 +17,7 @@ public class Main {
 
         IOData ioData = new IOData();
         ListOfComfortTariffs comfortTariffs = new ListOfComfortTariffs();
-        SortComfortTariffs sortComfortTariffs = new SortComfortTariffs();
+        ComfortTariffsSorter comfortTariffsSorter = new ComfortTariffsSorter();
         SearchTariff searchTariff = new SearchTariff();
         ClientsCounter totalNumberOfClients = new ClientsCounter();
 
@@ -44,7 +44,7 @@ public class Main {
 
         // Output sorted list of tariffs by subscription fee
         ioData.printInfoForUserNextLine("Sorted list of tariffs:");
-        sortComfortTariffs.sortComfortTariffsByFee(comfortTariffs.getComfortTariffs());
+        comfortTariffsSorter.sortComfortTariffsByFee(comfortTariffs.getComfortTariffs());
         for (ComfortTariff tariff : comfortTariffs.getComfortTariffs()) {
             ioData.printInfoForUserNextLine(tariff.toString());
         }

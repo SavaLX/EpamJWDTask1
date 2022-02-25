@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Class for sorting the comfort tariffs by subscription fee with comparator
  */
-public class SortComfortTariffs {
+public class ComfortTariffsSorter {
     /**
      * Method that sorts comfort tariffs in collection List.
      * Method use specified comparator for sorting.
