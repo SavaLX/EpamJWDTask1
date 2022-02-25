@@ -31,54 +31,54 @@ public class SearchTariff {
     public void searchTariffByParam(List<ComfortTariff> tariffs) {
         IOData ioData = new IOData();
         ioData.printInfoForUser("Enter the parameter: ");
-        String line = ioData.inPutStringFromUser();
+        String line = ioData.getInPutStringFromUser();
 
 
         switch (line) {
             case "internet" -> {
                 ioData.printInfoForUserNextLine("Enter the max and min parameter range of internet");
                 ioData.printInfoForUserNextLine("Max: ");
-                int internetMaximum = ioData.inPutIntegerFromUser();
+                int internetMaximum = ioData.getInPutIntegerFromUser();
                 ioData.printInfoForUserNextLine("Min: ");
-                int internetMinimum = ioData.inPutIntegerFromUser();
+                int internetMinimum = ioData.getInPutIntegerFromUser();
                 for (ComfortTariff tariff : tariffs) {
                     if (tariff.getInternetGB() >= internetMinimum && tariff.getInternetGB() <= internetMaximum) {
-                        ioData.printInfoAboutClass(tariff);
+                        ioData.printInfoAboutTariff(tariff);
                     }
                 }
             }
             case "subscription fee" -> {
                 ioData.printInfoForUserNextLine("Enter the max and min parameter range of subscription fee");
                 ioData.printInfoForUserNextLine("Max: ");
-                double feeMaximum = ioData.inPutDoubleFromUser();
+                double feeMaximum = ioData.getInPutDoubleFromUser();
                 ioData.skipLine();
                 ioData.printInfoForUserNextLine("Min: ");
-                double feeMinimum = ioData.inPutDoubleFromUser();
+                double feeMinimum = ioData.getInPutDoubleFromUser();
                 ioData.skipLine();
                 for (ComfortTariff tariff : tariffs) {
                     if (tariff.getSubscriptionFee() >= feeMinimum && tariff.getSubscriptionFee() <= feeMaximum) {
-                        ioData.printInfoAboutClass(tariff);
+                        ioData.printInfoAboutTariff(tariff);
                     }
                 }
             }
             case "discount" -> {
                 for (ComfortTariff tariff : tariffs) {
                     if (tariff.getClass() == ComfortL.class) {
-                        ioData.printInfoAboutClass(tariff);
+                        ioData.printInfoAboutTariff(tariff);
                     }
                 }
             }
             case "minutes in the network" -> {
                 for (ComfortTariff tariff : tariffs) {
                     if (tariff.getClass() == ComfortM.class) {
-                        ioData.printInfoAboutClass(tariff);
+                        ioData.printInfoAboutTariff(tariff);
                     }
                 }
             }
             case "bonus" -> {
                 for (ComfortTariff tariff : tariffs) {
                     if (tariff.getClass() == ComfortXL.class) {
-                        ioData.printInfoAboutClass(tariff);
+                        ioData.printInfoAboutTariff(tariff);
                     }
                 }
             }

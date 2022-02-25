@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class IOData {
 
-    Validator validator = new Validator();
+    private final Validator validator = new Validator();
     Scanner sc = new Scanner(System.in);
 
     public void printInfoForUser(String str) {
@@ -23,11 +23,11 @@ public class IOData {
         System.out.println();
     }
 
-    public void printInfoAboutClass(ComfortTariff tariff) {
+    public void printInfoAboutTariff(ComfortTariff tariff) {
         System.out.println(tariff);
     }
 
-    public int inPutIntegerFromUser() {
+    public int getInPutIntegerFromUser() {
         try {
             validator.validateInputInteger(sc);
         } catch (WrongInputDataException e) {
@@ -36,7 +36,7 @@ public class IOData {
         return sc.nextInt();
     }
 
-    public double inPutDoubleFromUser() {
+    public double getInPutDoubleFromUser() {
         try {
             validator.validateInputDouble(sc);
         } catch (WrongInputDataException e) {
@@ -45,7 +45,7 @@ public class IOData {
         return sc.nextDouble();
     }
 
-    public String inPutStringFromUser() {
+    public String getInPutStringFromUser() {
         try {
             validator.validateInputStrings(sc);
         } catch (WrongInputDataException e) {
