@@ -15,6 +15,13 @@ import java.util.List;
  * SearchTariff is a class for finding all matching tariffs based on user-specified parameters
  */
 public class SearchTariff {
+
+    private static final String INTERNET = "internet";
+    private static final String SUBSCRIPTION_FEE = "subscription fee";
+    private static final String DISCOUNT = "discount";
+    private static final String MINUTES_IN_THE_NETWORK = "minutes in the network";
+    private static final String BONUS = "bonus";
+
     /**
      * Method for finding all matching tariffs by input value of parameters by user.
      * Available parameters: internet, subscription fee, discount, minutes in the network, bonus.
@@ -35,7 +42,7 @@ public class SearchTariff {
 
 
         switch (line) {
-            case "internet" -> {
+            case INTERNET -> {
                 ioData.printInfoForUserNextLine("Enter the max and min parameter range of internet");
                 ioData.printInfoForUserNextLine("Max: ");
                 int internetMaximum = ioData.getInPutIntegerFromUser();
@@ -47,7 +54,7 @@ public class SearchTariff {
                     }
                 }
             }
-            case "subscription fee" -> {
+            case SUBSCRIPTION_FEE -> {
                 ioData.printInfoForUserNextLine("Enter the max and min parameter range of subscription fee");
                 ioData.printInfoForUserNextLine("Max: ");
                 double feeMaximum = ioData.getInPutDoubleFromUser();
@@ -61,21 +68,21 @@ public class SearchTariff {
                     }
                 }
             }
-            case "discount" -> {
+            case DISCOUNT -> {
                 for (ComfortTariff tariff : tariffs) {
                     if (tariff.getClass() == ComfortL.class) {
                         ioData.printInfoAboutTariff(tariff);
                     }
                 }
             }
-            case "minutes in the network" -> {
+            case MINUTES_IN_THE_NETWORK -> {
                 for (ComfortTariff tariff : tariffs) {
                     if (tariff.getClass() == ComfortM.class) {
                         ioData.printInfoAboutTariff(tariff);
                     }
                 }
             }
-            case "bonus" -> {
+            case BONUS -> {
                 for (ComfortTariff tariff : tariffs) {
                     if (tariff.getClass() == ComfortXL.class) {
                         ioData.printInfoAboutTariff(tariff);
