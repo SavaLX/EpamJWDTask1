@@ -14,17 +14,17 @@ public class ComfortL extends ComfortTariff {
     public ComfortL() {
     }
 
-    @Override
-    public void install() {
-        System.out.println("Tariff 'Comfort L' is installed on mobile");
-    }
-
     public double getDiscountValue() {
         return discountValue;
     }
 
     public void setDiscountValue(double discountValue) {
         this.discountValue = discountValue;
+    }
+
+    @Override
+    public void isInstall() {
+        System.out.println("Tariff 'Comfort L' is installed on mobile");
     }
 
     @Override

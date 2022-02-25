@@ -13,9 +13,6 @@ public abstract class ComfortTariff extends MobileTariff {
 
     }
 
-    @Override
-    public abstract void install();
-
     public int getInternetGB() {
         return internetGB;
     }
@@ -24,4 +21,6 @@ public abstract class ComfortTariff extends MobileTariff {
         this.internetGB = internetGB;
     }
 
+    @Override
+    public abstract void isInstall();
 }

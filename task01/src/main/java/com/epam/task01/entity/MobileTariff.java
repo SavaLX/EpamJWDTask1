@@ -2,9 +2,9 @@ package com.epam.task01.entity;
 
 public abstract class MobileTariff {
 
+    private static final String COMPANY = "A1";
     private double subscriptionFee;
     private int numberOfClients;
-    private static final String COMPANY = "A1";
 
     public MobileTariff(double subscriptionFee, int numberOfClients) {
         this.subscriptionFee = subscriptionFee;
@@ -14,8 +14,6 @@ public abstract class MobileTariff {
     public MobileTariff() {
 
     }
-
-    public abstract void install();
 
     public double getSubscriptionFee() {
         return subscriptionFee;
@@ -36,5 +34,7 @@ public abstract class MobileTariff {
     public String getCompany() {
         return COMPANY;
     }
+
+    public abstract void isInstall();
 
 }

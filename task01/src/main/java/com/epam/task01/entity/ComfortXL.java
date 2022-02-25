@@ -15,17 +15,17 @@ public class ComfortXL extends ComfortTariff {
 
     }
 
-    @Override
-    public void install() {
-        System.out.println("Tariff 'Comfort XL' is installed on mobile");
-    }
-
     public String getTypeOfBonus() {
         return typeOfBonus;
     }
 
     public void setTypeOfBonus(String typeOfBonus) {
         this.typeOfBonus = typeOfBonus;
+    }
+
+    @Override
+    public void isInstall() {
+        System.out.println("Tariff 'Comfort XL' is installed on mobile");
     }
 
     @Override

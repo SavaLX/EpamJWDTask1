@@ -15,17 +15,17 @@ public class ComfortM extends ComfortTariff {
 
     }
 
-    @Override
-    public void install() {
-        System.out.println("Tariff 'Comfort M' is installed on mobile");
-    }
-
     public int getMinutesInTheNetwork() {
         return minutesInTheNetwork;
     }
 
     public void setMinutesInTheNetwork(int minutesInTheNetwork) {
         this.minutesInTheNetwork = minutesInTheNetwork;
+    }
+
+    @Override
+    public void isInstall() {
+        System.out.println("Tariff 'Comfort M' is installed on mobile");
     }
 
     @Override
