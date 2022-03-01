@@ -12,9 +12,9 @@ import com.epam.task01.view.IOData;
 import java.util.List;
 
 /**
- * SearchTariff is a class for finding all matching tariffs based on user-specified parameters
+ * TariffSearch is a class for finding all matching tariffs based on user-specified parameters
  */
-public class SearchTariff {
+public class TariffSearch {
 
     private static final String INTERNET = "internet";
     private static final String SUBSCRIPTION_FEE = "subscription fee";
