@@ -1,9 +1,9 @@
 Task1. Object Oriented Programming
-
+--------------------------------------------------------------
 It is necessary to write an object-oriented application according to the requirements given below. 
 The application must implement the functionality defined by the individual task.
 
-
+----------------------------------------------------------------
 Requirements:
 
 ⦁ When implementing the inheritance hierarchy, the derived class must extend the superclass with new properties, for which it is necessary to understand the subject area of ​​the problem.
@@ -27,6 +27,7 @@ Requirements:
 ⦁ Do not implement a custom menu for the application.
 
 
+-------------------------------------------------------------------
 
 Individual task:
 
